@@ -23,7 +23,7 @@
              <h1 class="major">{{ page.title }}</h1>
              {% if page.images[0] %}
              <span class="image fit">
-               <img src="{{ site.baseurl }}{{ page.images[0] }}" alt="{{ page.title }}" />
+               <img src="/{{ site.baseurl }}/{{ page.images[0] }}" alt="{{ page.title }}" />
              </span>
              {% endif %}
              {{ content | replace: '<a href="http', '<a rel="nofollow" target="_blank" href="http' }}
@@ -34,7 +34,7 @@
                  {% for post in site.related_posts limit:3 %}
                    <li>
                      <h3>
-                       <a href="{{ post.url }}">
+                       <a class="internal" href="{{ site.url }}{{ site.baseurl }}{{ post.url }}">
                          {{ post.title }}
                          <small>{{ post.date | date_to_string }}</small>
                        </a>
