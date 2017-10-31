@@ -7,8 +7,8 @@ markdown:         kramdown
 title:            Space
 tagline:          'A Jekyll theme'
 description:      'This is a Jekyll version of the Hyperspace HTML5UP website template. It has three post types - post, page and feature.'
-url:              http://example.com
-baseurl:          /
+url:              https://at-publishing.github.io
+baseurl:          /hyperspace-jekyll/
 
 gems:             [jekyll-paginate]
 
