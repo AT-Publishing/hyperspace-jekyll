@@ -1,0 +1,24 @@
+---
+layout: default
+---
+
+<!-- Header -->
+  <header id="header">
+    <a href="index.html" class="title">{{ site.title }}</a>
+    {% include pagesmenu.html %}
+  </header>
+
+<!-- Wrapper -->
+  <div id="page-wrapper">
+
+    <!-- Main -->
+      <section id="main" class="wrapper">
+        <div class="inner">
+          <h1 class="major">{{ page.title }}</h1>
+          <span class="image fit"><img src="{{ page.images[0] }}" alt="{{ page.title }}" /></span>
+          {{ content }}
+
+        </div>
+      </section>
+
+  </div>

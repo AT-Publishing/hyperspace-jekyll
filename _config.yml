@@ -1,0 +1,25 @@
+# Dependencies
+markdown:         kramdown
+
+# Permalinks
+
+# Setup
+title:            Space
+tagline:          'A Jekyll theme'
+description:      '...'
+url:              http://example.com
+baseurl:          /
+
+gems:             [jekyll-paginate]
+
+author:
+  name:           'HTML5UP + JMT'
+  url:            https://bitbucket.org/_xin_chao
+
+paginate:         5
+
+# Custom vars
+version:          1.0
+
+github:
+  repo:           https://bitbucket.org/_xin_chao

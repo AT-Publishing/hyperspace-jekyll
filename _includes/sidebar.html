@@ -1,0 +1,23 @@
+<!-- Sidebar -->
+  <section id="sidebar">
+    <div class="inner">
+      <div class="sidebar-about">
+        <h1>
+          <a href="{{ site.baseurl }}">
+            {{ site.title }}
+          </a>
+        </h1>
+        <p class="lead">{{ site.description }}</p>
+      </div>
+      {% include pagesmenu.html %}
+      <!-- homepage sections -->
+      <nav>
+        <ul>
+          <li><a class="internal" href="{{ site.baseurl }}#intro">Welcome</a></li>
+          <li><a class="internal" href="{{ site.baseurl }}#one">Who we are</a></li>
+          <li><a class="internal" href="{{ site.baseurl }}#two">What we do</a></li>
+          <li><a class="internal" href="{{ site.baseurl }}#three">Get in touch</a></li>
+        </ul>
+      </nav>
+    </div>
+  </section>
