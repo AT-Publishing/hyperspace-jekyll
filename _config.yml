@@ -6,15 +6,16 @@ markdown:         kramdown
 # Setup
 title:            Space
 tagline:          'A Jekyll theme'
-description:      '...'
+description:      'This is a Jekyll version of the Hyperspace HTML5UP website template. It has three post types - post, page and feature.'
 url:              http://example.com
 baseurl:          /
 
 gems:             [jekyll-paginate]
 
 author:
-  name:           'HTML5UP + JMT'
+  name:           'JMT'
   url:            https://bitbucket.org/_xin_chao
+  uri:            https://bitbucket.org/_xin_chao
 
 paginate:         5
 
@@ -22,4 +23,23 @@ paginate:         5
 version:          1.0
 
 github:
-  repo:           https://bitbucket.org/_xin_chao
+  repo:           https://github.com/AT-Publishing/hyperspace-jekyll
+
+# social
+email:            admin@example.com
+telegram:         https://t.me/sth
+facebook:         https://facebook.com
+twitter:          https://twitter.com
+instagram:
+linkedin:
+
+projects: ['https://tadada.com', 'http://sth.com']
+
+
+collections:
+  - features
+
+collections:
+  features:
+    output: true
+    permalink: /:collection/:slug

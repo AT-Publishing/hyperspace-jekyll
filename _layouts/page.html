@@ -1,24 +1,38 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en-us">
 
-<!-- Header -->
-  <header id="header">
-    <a href="index.html" class="title">{{ site.title }}</a>
-    {% include pagesmenu.html %}
-  </header>
+  {% include head.html %}
 
-<!-- Wrapper -->
-  <div id="page-wrapper">
+  <body>
 
-    <!-- Main -->
-      <section id="main" class="wrapper">
-        <div class="inner">
-          <h1 class="major">{{ page.title }}</h1>
-          <span class="image fit"><img src="{{ page.images[0] }}" alt="{{ page.title }}" /></span>
-          {{ content }}
+    {% include sidebar.html %}
 
-        </div>
-      </section>
+    <div class="content container" id="wrapper">
+      <!-- Header -->
+        <header id="header">
+          <a href="index.html" class="title">{{ site.title }}</a>
+          {% include pagesmenu.html %}
+        </header>
 
-  </div>
+
+
+       <!-- Main -->
+         <section id="main" class="wrapper">
+
+           <div class="inner">
+             <h1 class="major">{{ page.title }}</h1>
+             {% if page.images[0] %}
+             <span class="image fit">
+               <img src="{{ site.baseurl }}{{ page.images[0] }}" alt="{{ page.title }}" />
+             </span>
+             {% endif %}
+             {{ content | replace: '<a href="http', '<a rel="nofollow" target="_blank" href="http' }}
+           </div>
+         </section>
+
+    </div>
+
+    {% include footer.html %}
+
+  </body>
+</html>

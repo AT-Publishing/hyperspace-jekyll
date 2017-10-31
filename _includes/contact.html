@@ -1,0 +1,53 @@
+<div class="inner">
+  <h2>Get in touch</h2>
+  <p>{{ site.title }} - {{ site.tagline }}</p>
+  <div class="split style1">
+    <section>
+      <form method="POST" action="http://formspree.io/{{ site.email }}">
+        <div class="field half first">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+        <div class="field half">
+          <label for="email">Email</label>
+          <input type="text" name="email" id="email" />
+        </div>
+        <div class="field">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="5"></textarea>
+        </div>
+        <ul class="actions">
+          <li><a class="button submit">Send Message</a></li>
+        </ul>
+      </form>
+    </section>
+    <section>
+      <ul class="contact">
+        <li>
+          <h3>Projects we're involved in</h3>
+          {% for item in site.projects %}
+          <a href="{{ item }}"><span>{{ item }}</span></a><br />
+          {% endfor %}
+        </li>
+        <li>
+          <h3>Email</h3>
+          <a href="mailto:{{site.email}}">{{ site.email }}</a>
+        </li>
+        <li>
+          <h3>Telegram</h3>
+          <a href="{{site.telegram}}">{{ site.telegram }}</a>
+        </li>
+        <li>
+          <h3>Social</h3>
+          <ul class="icons">
+            {% if site.twitter %}<li><a href="{{ site.twitter }}" class="fa-twitter"><span class="label">Twitter</span></a></li>{% endif %}
+            {% if site.facebook %}<li><a href="{{ site.facebook }}" class="fa-facebook"><span class="label">Facebook</span></a></li>{% endif %}
+            {% if site.github.repo %}<li><a href="{{ site.github.repo }}" class="fa-github"><span class="label">GitHub</span></a></li>{% endif %}
+            {% if site.instagram %}<li><a href="{{ site.instagram }}" class="fa-instagram"><span class="label">Instagram</span></a></li>{% endif %}
+            {% if site.linkedin %}<li><a href="{{ site.linkedin }}" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>{% endif %}
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>

@@ -1,14 +1,19 @@
 ---
 layout: post
 title: Introducing Hyde
+description: "Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by"
 permalink: intro/
 
 date: 2017-10-31 14:02 +0700
 update: 2017-10-31 14:02 +0700
 
 images: ["images/pic03.jpg"]
-categories: [""]
-tags: [""]
+categories: ["featured"]
+tags: ["jekyll","info","news"]
+
+author: 'JMT'
+author_twitter: '@test'
+author_uri: 'https://bitbucket.org/_xin_chao'
 ---
 
 Hyde is a brazen two-column [Jekyll](http://jekyllrb.com) theme that pairs a prominent sidebar with uncomplicated content. It's based on [Poole](http://getpoole.com), the Jekyll butler.
