@@ -5,7 +5,9 @@
       {% if node.title != null %}
         {% if (node.layout == "page") or (node.layout == "blogposts") %}
           <li>
-            <a class="internal nav-item{% if page.url == node.url %} active{% endif %}" href="{{ node.url }}">
+            <a
+            class="internal nav-item{% if page.url == node.url %} active{% endif %}"
+            href="{{ site.url }}{{ site.baseurl }}{{ node.url }}">
               {{ node.title }}
             </a>
           </li>

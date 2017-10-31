@@ -18,22 +18,13 @@
 
 <meta property="og:locale" content="en_US" />
 <meta property="og:type" content="article" />
-<meta property="og:title" content="{{ page.title }} - {{ site.title }}" />
+<meta property="og:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.tagline }}{% endif %}" />
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.permalink }}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 
-{% if page.tags[0] %}
-{% for tag in page.tags %}
-<meta property="article:tag" content="{{ tag }}" />
-{% endfor %}
-{% endif %}
-
-{% if page.categories[0] %}
-{% for cat in page.categories %}
-<meta property="article:section" content="{{ cat }}" />
-{% endfor %}
-{% endif %}
+{% if page.tags[0] %}{% for tag in page.tags %}<meta property="article:tag" content="{{ tag }}" />{% endfor %}{% endif %}
+{% if page.categories[0] %}{% for cat in page.categories %}<meta property="article:section" content="{{ cat }}" />{% endfor %}{% endif %}
 
 {% if page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />{% endif %}
 
@@ -46,7 +37,7 @@
 
 <meta name="twitter:card" content="summary" />
 <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-<meta name="twitter:title" content="{{ page.title }} - {{ site.title }}" />
+<meta name="twitter:title" content="{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }} - {{ site.tagline }}{% endif %}" />
 {% if page.images[0] %}
 <meta property="twitter:image" content="{{ site.url }}{{ site.baseurl }}{{ page.images[0] }}" />
 <meta property="twitter:image:secure_url" content="{{ site.url }}{{ site.baseurl }}{{ page.images[0] }}" />
@@ -57,12 +48,12 @@
 
 
 
-  <!--[if lte IE 8]><script src="{{ site.baseurl }}assets/js/ie/html5shiv.js"></script><![endif]-->
+  <!--[if lte IE 8]><script src="{{ site.baseurl }}/assets/js/ie/html5shiv.js"></script><![endif]-->
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}assets/css/main.css" />
-  <!--[if lte IE 9]><link rel="stylesheet" href="{{ site.baseurl }}assets/css/ie9.css" /><![endif]-->
-  <!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}assets/css/ie8.css" /><![endif]-->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css" />
+  <!--[if lte IE 9]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie9.css" /><![endif]-->
+  <!--[if lte IE 8]><link rel="stylesheet" href="{{ site.baseurl }}/assets/css/ie8.css" /><![endif]-->
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
