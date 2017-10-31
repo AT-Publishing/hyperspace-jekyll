@@ -38,7 +38,9 @@ layout: default
 												</p>
 												<ul class="actions">
 													<li>
-														<a class="internal button" href="{{ node.url }}">
+														<a
+														class="internal button"
+														href="{{ site.url }}{{ site.baseurl }}{{ node.url }}">
 															Read more
 														</a>
 													</li>
@@ -57,7 +59,7 @@ layout: default
 					<section id="two" class="wrapper style3 fade-up">
 						<div class="inner">
 							<h2>What we do</h2>
-							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
+							<p>{{ site.featurestagline}}</p>
 
 							<div class="features">
 
@@ -70,7 +72,10 @@ layout: default
 										<h3>{{ node.title }}</h3>
 										<p>{{ node.description }}</p>
 										<ul class="actions">
-											<li><a class="internal button" href="{{ node.url }}">Learn more</a></li>
+											<li>
+												<a
+												class="internal button"
+												href="{{ site.url }}{{ site.baseurl }}{{ node.url }}">Learn more</a></li>
 										</ul>
 									</section>
 
@@ -78,11 +83,7 @@ layout: default
 								{% endfor %}
 
 							</div>
-							<!--
-							<ul class="actions">
-								<li><a href="#" class="button">Learn more</a></li>
-							</ul>
-						-->
+
 						</div>
 					</section>
 
