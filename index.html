@@ -24,9 +24,9 @@ layout: default
 
 
 									<section>
-										<a class="internal image" href="{{ node.url }}">
+										<a class="internal image" href="{{ site.url }}{{ site.baseurl }}{{ node.url }}">
 											<img
-											src="{{ site.baseurl }}{{ node.images[0]}}"
+											src="{{ site.url }}{{ site.baseurl }}{{ node.images[0]}}"
 											alt="{{ node.title }}"
 											data-position="center center" />
 										</a>
